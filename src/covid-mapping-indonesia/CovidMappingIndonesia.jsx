@@ -370,6 +370,9 @@ export default class CovidMappingIndonesia extends Component {
     render() {
         return (
             <div id={styles["Home-Container"]}>
+                <button onClick={()=>console.log(this.state.indonesiaDataHarianJumlahJumlahPositif)}>
+                    masd
+                </button>
                 <Navbar tanggalUpdate={this.state.tanggalUpdate} statusLoad={this.state.statusLoad} province={this.state.allProvinceName} provChange={(event) => this.handleProvinceChange(event)} />{" "}
                 <Section1
                     statusLoad={this.state.statusLoad}
