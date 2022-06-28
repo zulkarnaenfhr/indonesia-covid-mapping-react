@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
+import Cardberita from "../../components/CardBerita/CardBerita";
 import CardChartPenambahanKasus from "../../components/CardCharts/CardChartPenambahanKasus/CardChartPenambahanKasus";
 import CardChartPenambahanMeninggal from "../../components/CardCharts/CardChartPenambahanMeninggal/CardChartPenambahanMeninggal";
 import CardChartPenambahanSembuh from "../../components/CardCharts/CardChartPenambahanSembuh/CardChartPenambahanSembuh";
@@ -76,6 +77,7 @@ export default class Section2 extends Component {
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={3}>
                     <Wilayahkasusterbanyak dataProvinsi={this.props.provinceData} />
+                    <Cardberita dataBerita={this.props.beritaCovid} />
                 </Col>
             </Row>
         );
