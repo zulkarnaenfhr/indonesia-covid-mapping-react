@@ -4,6 +4,7 @@ import CardChartPenambahanKasus from "../../components/CardCharts/CardChartPenam
 import CardChartPenambahanMeninggal from "../../components/CardCharts/CardChartPenambahanMeninggal/CardChartPenambahanMeninggal";
 import CardChartPenambahanSembuh from "../../components/CardCharts/CardChartPenambahanSembuh/CardChartPenambahanSembuh";
 import CardChartTotalKasus from "../../components/CardCharts/CardChartTotalKasus/CardChartTotalKasus";
+import Wilayahkasusterbanyak from "../../components/wilayahKasusTerbanyak/WilayahKasusTerbanyak";
 import styles from "./Section2.module.css";
 
 export default class Section2 extends Component {
@@ -74,7 +75,7 @@ export default class Section2 extends Component {
                     <button onClick={() => console.log(this.state.status)}>asdasda</button>
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={3}>
-                    <h1>masuk</h1>
+                    <Wilayahkasusterbanyak dataProvinsi={this.props.provinceData} />
                 </Col>
             </Row>
         );
