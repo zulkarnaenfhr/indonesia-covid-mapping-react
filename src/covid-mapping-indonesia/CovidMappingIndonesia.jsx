@@ -369,7 +369,7 @@ export default class CovidMappingIndonesia extends Component {
     render() {
         return (
             <div id={styles["Home-Container"]}>
-                <Navbar tanggalUpdate={this.state.tanggalUpdate} statusLoad={this.state.statusLoad} province={this.state.province} provChange={(event) => this.handleProvinceChange(event)} />{" "}
+                <Navbar tanggalUpdate={this.state.tanggalUpdate} statusLoad={this.state.statusLoad} province={this.state.allProvinceName} provChange={(event) => this.handleProvinceChange(event)} />{" "}
                 <Section1
                     statusLoad={this.state.statusLoad}
                     totalCasedTotalCased={this.state.totalKasus}
@@ -385,7 +385,7 @@ export default class CovidMappingIndonesia extends Component {
                 />
                 <button
                     onClick={() => {
-                        console.log(this.state.province);
+                        console.log(this.state.allProvinceName);
                     }}
                 >
                     masuk
