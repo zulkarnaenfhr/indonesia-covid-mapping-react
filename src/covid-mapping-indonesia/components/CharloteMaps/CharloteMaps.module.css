@@ -1,0 +1,58 @@
+#charloteMapsContainer {
+    width: 765px;
+    border: 1px solid #5d5c5c;
+}
+
+.mapsPenjelasan {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+    padding-top: 20px;
+}
+
+.penjelasanContainer {
+    padding-right: 20px;
+}
+
+.boxPenjelasan {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+.penjelasanTinggi {
+    background-color: #f5bfba;
+    border: 3px solid #ff0000;
+}
+
+.penjelasanSedang {
+    background-color: #f5e0ba;
+    border: 3px solid #fabb48;
+}
+.penjelasanRendah {
+    background-color: #eeeabe;
+    border: 3px solid #ded716;
+}
+
+.descPenjelasan {
+    position: relative;
+    left: 10px;
+    bottom: 1.5px;
+}
+
+.descPenjelasan-tinggi:hover {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.descPenjelasan-sedang:hover {
+    color: #fabb48;
+    cursor: pointer;
+}
+
+.descPenjelasan-rendah:hover {
+    color: #ded716;
+    cursor: pointer;
+}

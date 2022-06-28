@@ -5,6 +5,7 @@ import CardChartPenambahanKasus from "../../components/CardCharts/CardChartPenam
 import CardChartPenambahanMeninggal from "../../components/CardCharts/CardChartPenambahanMeninggal/CardChartPenambahanMeninggal";
 import CardChartPenambahanSembuh from "../../components/CardCharts/CardChartPenambahanSembuh/CardChartPenambahanSembuh";
 import CardChartTotalKasus from "../../components/CardCharts/CardChartTotalKasus/CardChartTotalKasus";
+import Charlotemaps from "../../components/CharloteMaps/CharloteMaps";
 import Wilayahkasusterbanyak from "../../components/wilayahKasusTerbanyak/WilayahKasusTerbanyak";
 import styles from "./Section2.module.css";
 
@@ -72,8 +73,7 @@ export default class Section2 extends Component {
                     </div>
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={6}>
-                    <h1>masuk</h1>
-                    <button onClick={() => console.log(this.state.status)}>asdasda</button>
+                    {this.props.statusLoad ? <Charlotemaps dataWarna={this.props.warnaProvinsi} /> : <h1>masuk</h1>}
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={3}>
                     <Wilayahkasusterbanyak dataProvinsi={this.props.provinceData} />
