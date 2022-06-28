@@ -1,0 +1,45 @@
+#CardData {
+    width: 100%;
+    max-width: 280px;
+    height: 164px;
+    border: 1px solid #5d5c5c;
+    font-family: "Roboto Flex", sans-serif;
+    color: white;
+    margin-top: 20px;
+}
+
+.CardData-Top {
+    height: 60%;
+    background-color: #222222;
+    border-bottom: 1px solid #5d5c5c;
+}
+
+.CardData-Top-Title {
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-top: 3px;
+    letter-spacing: 0.5px;
+}
+
+.CardData-Top-Value {
+    font-size: 35px;
+    text-align: center;
+}
+
+.CardData-Bottom {
+    height: 40%;
+}
+
+.CardData-Bottom-Title {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0px;
+}
+
+.CardData-Bottom-Value {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}

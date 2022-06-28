@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./CovidMappingIndonesia.module.css";
+import Navbar from "./containers/Navbar/Navbar";
+import Section1 from "./containers/Section1/Section1";
 
 export default class CovidMappingIndonesia extends Component {
     constructor(props) {
@@ -367,7 +369,20 @@ export default class CovidMappingIndonesia extends Component {
     render() {
         return (
             <div id={styles["Home-Container"]}>
-                <h1>masuk</h1>
+                <Navbar tanggalUpdate={this.state.tanggalUpdate} statusLoad={this.state.statusLoad} province={this.state.province} provChange={(event) => this.handleProvinceChange(event)} />{" "}
+                <Section1
+                    statusLoad={this.state.statusLoad}
+                    totalCasedTotalCased={this.state.totalKasus}
+                    updatedCasedTotalCased={this.state.updateTotalKasus}
+                    totalCasedActiveCased={this.state.totalDirawat}
+                    updatedCasedActiveCased={this.state.updateTotalDirawat}
+                    totalCasedRecoveryCased={this.state.totalSembuh}
+                    updatedCasedRecoveryCased={this.state.updateTotalSembuh}
+                    totalCasedDeathCased={this.state.totalMeningggal}
+                    updatedCasedDeathCased={this.state.updateTotalMeningggal}
+                    VaccinationTotal1={this.state.jumlahVaksin1}
+                    VaccinationTotal2={this.state.jumlahVaksin2}
+                />
             </div>
         );
     }

@@ -1,0 +1,55 @@
+#Navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #222222;
+    color: white;
+    align-items: center;
+    display: flex;
+}
+
+.Navbar-Branding {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.Navbar-Branding > span {
+    color: red;
+}
+
+.Navbar-Column-Right {
+    display: flex;
+    justify-content: right;
+}
+
+.Navbar-Form-Box {
+    width: 200px;
+    border: 1px solid #5d5c5c;
+    height: 100%;
+    padding-top: 5px;
+    padding-left: 9px;
+    font-family: "Roboto-Flex", sans-serif;
+}
+
+.Navbar-Form-Box-Title {
+    font-size: 15px;
+}
+
+.Navbar-Form-Box-Desc {
+    font-size: 15px;
+    color: #adadad;
+}
+
+.selectOption {
+    width: 95%;
+    color: #adadad;
+    background-color: #222222;
+    border-radius: 6px;
+    border: none;
+    position: relative;
+    bottom: 5px;
+}
