@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./CovidMappingIndonesia.module.css";
 import Navbar from "./containers/Navbar/Navbar";
 import Section1 from "./containers/Section1/Section1";
+import Section2 from "./containers/Section2/Section2";
 
 export default class CovidMappingIndonesia extends Component {
     constructor(props) {
@@ -383,13 +384,7 @@ export default class CovidMappingIndonesia extends Component {
                     VaccinationTotal1={this.state.jumlahVaksin1}
                     VaccinationTotal2={this.state.jumlahVaksin2}
                 />
-                <button
-                    onClick={() => {
-                        console.log(this.state.allProvinceName);
-                    }}
-                >
-                    masuk
-                </button>
+                <Section2 />
             </div>
         );
     }
