@@ -17,8 +17,8 @@ class CardChartTotalKasus extends Component {
         // buat ambil data
         for (let i = 0; i < this.props.data.length; i++) {
             data.push({
-                date: this.props.data[i].tanggal,
-                value: this.props.data[i].positif_kumulatif,
+                date: this.props.data[i].key_as_string,
+                value: this.props.data[i].jumlah_positif.value,
             });
         }
         // end of buat ambil data

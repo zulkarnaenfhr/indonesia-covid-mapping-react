@@ -4,6 +4,8 @@ import styles from "./CovidMappingIndonesia.module.css";
 import Navbar from "./containers/Navbar/Navbar";
 import Section1 from "./containers/Section1/Section1";
 import Section2 from "./containers/Section2/Section2";
+import { Row, Col } from "react-bootstrap";
+import CardChartTotalKasus from "./components/CardCharts/CardChartTotalKasus/CardChartTotalKasus";
 
 export default class CovidMappingIndonesia extends Component {
     constructor(props) {
@@ -370,9 +372,7 @@ export default class CovidMappingIndonesia extends Component {
     render() {
         return (
             <div id={styles["Home-Container"]}>
-                <button onClick={()=>console.log(this.state.indonesiaDataHarianJumlahJumlahPositif)}>
-                    masd
-                </button>
+                <button onClick={() => console.log(this.state.indonesiaDataHarian)}>masd</button>
                 <Navbar tanggalUpdate={this.state.tanggalUpdate} statusLoad={this.state.statusLoad} province={this.state.allProvinceName} provChange={(event) => this.handleProvinceChange(event)} />{" "}
                 <Section1
                     statusLoad={this.state.statusLoad}
@@ -387,7 +387,7 @@ export default class CovidMappingIndonesia extends Component {
                     VaccinationTotal1={this.state.jumlahVaksin1}
                     VaccinationTotal2={this.state.jumlahVaksin2}
                 />
-                <Section2 statusLoad={this.state.statusLoad} dataJumlahJumlahPositif={this.state.indonesiaDataHarianJumlahJumlahPositif} />
+                <Section2 statusLoad={this.state.statusLoad} dataJumlahJumlahPositif={this.state.indonesiaDataHarian} />
             </div>
         );
     }
