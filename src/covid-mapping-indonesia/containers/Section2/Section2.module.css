@@ -1,3 +1,17 @@
 .Section2-Column-Container {
-    margin-top: 20px;
+    margin-top: 15px;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: right;
+}
+
+.ButtonRow2Section1 {
+    border: 1px solid #5d5c5c;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: white;
 }

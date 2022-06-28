@@ -73,7 +73,7 @@ class CardChartPenambahanKasus extends Component {
     render() {
         return (
             <div id={styles["cardChartPenambahanKasus"]}>
-                <p className={styles["cardChartTotalKasus-judul"]}>Update Chart of National Daily Case Increase</p>
+                <p className={styles["cardChartTotalKasus-judul"]}>Update Chart of National Daily Case Increased</p>
                 <div className={styles["chartTotalKasus-container"]} id="chartdiv2" style={{ position: "relative", bottom: "20px", width: "100%", height: "220px" }}></div>
             </div>
         );

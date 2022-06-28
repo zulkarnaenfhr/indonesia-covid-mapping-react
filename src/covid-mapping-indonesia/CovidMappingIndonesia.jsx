@@ -385,7 +385,7 @@ export default class CovidMappingIndonesia extends Component {
                     VaccinationTotal2={this.state.jumlahVaksin2}
                 />
                 <Section2 statusLoad={this.state.statusLoad} data={this.state.indonesiaDataHarian} />
-                <button onClick={() => console.log(this.state.indonesiaDataHarian)}>masd</button>
+                {/* <button onClick={() => console.log(this.state.indonesiaDataHarian)}>masd</button> */}
             </div>
         );
     }
