@@ -1,0 +1,17 @@
+#cardChartTotalKasus {
+    background-color: #222222;
+    border: 1px solid #5d5c5c;
+    height: 250px;
+}
+
+.chartTotalKasus-container {
+    position: relative;
+}
+
+.cardChartTotalKasus-judul {
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 3px;
+    color: white;
+}
