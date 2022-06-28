@@ -22,25 +22,26 @@ const Navbar = (props) => {
                             <h2 className={styles["Navbar-Form-Box-Desc"]}>{props.statusLoad ? props.tanggalUpdate : <Spinner animation="grow" size="sm" />}</h2>
                         </div>
                         <div className={styles["Navbar-Form-Box"]}>
-                            <form action="">
-                                <h1 className={styles["Navbar-Form-Box-Title"]}>Province</h1>
-                                {props.statusLoad ? (
-                                    <>
-                                        <select onChange={handleOnChange} className={styles["selectOption"]}>
-                                            <option value="">Select Province</option>
-                                            {props.province.map((prov) => {
-                                                return (
-                                                    <option key={prov} value={prov}>
-                                                        {prov}
-                                                    </option>
-                                                );
-                                            })}
-                                        </select>
-                                    </>
-                                ) : (
+                            {props.statusLoad ? (
+                                <form action="">
+                                    <h1 className={styles["Navbar-Form-Box-Title"]}>Province</h1>
+                                    <select onChange={handleOnChange} className={styles["selectOption"]}>
+                                        <option value="">Select Province</option>
+                                        {props.province.map((prov) => {
+                                            return (
+                                                <option key={prov} value={prov}>
+                                                    {prov}
+                                                </option>
+                                            );
+                                        })}
+                                    </select>
+                                </form>
+                            ) : (
+                                <>
+                                    <h1 className={styles["Navbar-Form-Box-Title"]}>Province</h1>
                                     <Spinner animation="grow" size="sm" />
-                                )}
-                            </form>
+                                </>
+                            )}
                         </div>
                     </Col>
                 </Row>
