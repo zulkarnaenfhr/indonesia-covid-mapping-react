@@ -7,9 +7,7 @@ export default class Section2 extends Component {
     render() {
         return (
             <Row>
-                <Col>
-                    <CardChartTotalKasus />
-                </Col>
+                <Col>{this.props.statusLoad ? <CardChartTotalKasus data={this.props.dataJumlahJumlahPositif} /> : <h1>masuk</h1>}</Col>
                 <Col>
                     <h1>masuk</h1>
                 </Col>
