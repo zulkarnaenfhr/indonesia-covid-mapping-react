@@ -161,7 +161,7 @@ export default class CovidMappingIndonesia extends Component {
             this.setState({
                 statusLoad: true,
             });
-        }, 9000);
+        }, 5000);
     };
 
     getBeritaCovid = async () => {
