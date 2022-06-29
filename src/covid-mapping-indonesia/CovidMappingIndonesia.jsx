@@ -4,6 +4,7 @@ import styles from "./CovidMappingIndonesia.module.css";
 import Navbar from "./containers/Navbar/Navbar";
 import Section1 from "./containers/Section1/Section1";
 import Section2 from "./containers/Section2/Section2";
+import Footer from "./containers/Footer/Footer";
 
 export default class CovidMappingIndonesia extends Component {
     constructor(props) {
@@ -385,6 +386,7 @@ export default class CovidMappingIndonesia extends Component {
                     VaccinationTotal2={this.state.jumlahVaksin2}
                 />
                 <Section2 statusLoad={this.state.statusLoad} data={this.state.indonesiaDataHarian} provinceData={this.state.provinceData} beritaCovid={this.state.beritaCovid} warnaProvinsi={this.state.warnaProvinsi} />
+                <Footer />
                 {/* <button onClick={() => console.log(this.state.indonesiaDataHarian)}>masd</button> */}
             </div>
         );
