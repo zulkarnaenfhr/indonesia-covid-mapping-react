@@ -8,6 +8,7 @@ import CardChartTotalKasus from "../../components/CardCharts/CardChartTotalKasus
 import Charlotemaps from "../../components/CharloteMaps/CharloteMaps";
 import Wilayahkasusterbanyak from "../../components/wilayahKasusTerbanyak/WilayahKasusTerbanyak";
 import styles from "./Section2.module.css";
+import { Spinner } from "react-bootstrap";
 
 export default class Section2 extends Component {
     constructor(props) {
@@ -34,7 +35,14 @@ export default class Section2 extends Component {
                             )}
                         </>
                     ) : (
-                        <h1>masuk</h1>
+                        <>
+                            <div id={styles["CardChartLoading"]}>
+                                <Spinner animation="grow" size="xl" />
+                            </div>
+                            <div id={styles["CardChartLoading2"]}>
+                                <Spinner animation="grow" size="xl" />
+                            </div>
+                        </>
                     )}
                     <div className={styles["ButtonContainer"]}>
                         <button

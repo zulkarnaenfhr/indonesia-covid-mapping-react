@@ -12,7 +12,14 @@ export default function CardData(props) {
                         {props.totalCased.toLocaleString()}
                     </h1>
                 ) : (
-                    <Spinner animation="grow" size="sm" />
+                    <p
+                        style={{
+                            textAlign: "center",
+                            color: props.warna,
+                        }}
+                    >
+                        <Spinner animation="grow" size="sm" />
+                    </p>
                 )}
             </div>
             <div className={styles["CardData-Bottom"]}>
@@ -22,7 +29,14 @@ export default function CardData(props) {
                         {props.updatedCased.toLocaleString()}
                     </p>
                 ) : (
-                    <Spinner animation="grow" size="sm" />
+                    <p
+                        style={{
+                            textAlign: "center",
+                            color: props.warna,
+                        }}
+                    >
+                        <Spinner animation="grow" size="sm" />
+                    </p>
                 )}
             </div>
         </div>

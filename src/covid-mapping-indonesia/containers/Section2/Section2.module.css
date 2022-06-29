@@ -15,3 +15,24 @@
     border-radius: 5px;
     color: white;
 }
+
+#CardChartLoading {
+    background-color: #222222;
+    border: 1px solid #5d5c5c;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#CardChartLoading2 {
+    background-color: #222222;
+    height: 230px;
+    margin-top: 10px;
+    border: 1px solid #5d5c5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
