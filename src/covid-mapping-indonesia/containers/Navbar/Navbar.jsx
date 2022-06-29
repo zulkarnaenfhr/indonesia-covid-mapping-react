@@ -9,7 +9,7 @@ const Navbar = (props) => {
 
     return (
         <div id={styles["Navbar"]}>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col lg={5}>
                         <h1 className={styles["Navbar-Branding"]}>

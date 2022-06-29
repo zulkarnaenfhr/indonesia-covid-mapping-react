@@ -81,7 +81,22 @@ export default class Section2 extends Component {
                     </div>
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={6}>
-                    {this.props.statusLoad ? <Charlotemaps dataWarna={this.props.warnaProvinsi} /> : <h1>masuk</h1>}
+                    {this.props.statusLoad ? (
+                        <Charlotemaps dataWarna={this.props.warnaProvinsi} />
+                    ) : (
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                color: "white",
+                            }}
+                        >
+                            <Spinner animation="grow" size="xl" />
+                        </div>
+                    )}
                 </Col>
                 <Col className={styles["Section2-Column-Container"]} lg={3}>
                     <Wilayahkasusterbanyak dataProvinsi={this.props.provinceData} />
