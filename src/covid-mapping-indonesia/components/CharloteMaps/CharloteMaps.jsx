@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { center } from "./CharloteMapsData";
 import Polygondata from "./PolygonData";
 import styles from "./CharloteMaps.module.css";
+import { Row, Col } from "react-bootstrap";
 
 class Charlotemaps extends Component {
     constructor(props) {
@@ -53,7 +54,7 @@ class Charlotemaps extends Component {
                 <MapContainer
                     center={center}
                     style={{
-                        width: "765px",
+                        width: "818px",
                         height: "490px",
                     }}
                     zoom={5}
@@ -63,20 +64,20 @@ class Charlotemaps extends Component {
                     <Polygondata dataWarna={this.props.dataWarna} onMouseIn={(provinsi) => this.handleMouseIn(provinsi)} onMouseOut={(provinsi) => this.handleMouseOut(provinsi)} />
                 </MapContainer>
 
-                <div className={styles["mapsPenjelasan"]}>
-                    <div className={styles["penjelasanContainer"]}>
-                        <div className={`${styles["floatLeft"]} ${styles["boxPenjelasan"]} ${styles["penjelasanTinggi"]}`}></div>
-                        <p className={`${styles["floatLeft"]} ${styles["descPenjelasan"]} ${styles["descPenjelasan-tinggi"]}`}>High Risk Area ({this.state.persenTinggi.toFixed(2)}%) </p>
-                    </div>
-                    <div className={styles["penjelasanContainer"]}>
-                        <div className={`${styles["floatLeft"]} ${styles["boxPenjelasan"]} ${styles["penjelasanSedang"]}`}></div>
-                        <p className={`${styles["floatLeft"]} ${styles["descPenjelasan"]} ${styles["descPenjelasan-sedang"]}`}>Medium Risk Area ({this.state.persenSedang.toFixed(2)}%) </p>
-                    </div>
-                    <div className={styles["penjelasanContainer"]}>
-                        <div className={`${styles["floatLeft"]} ${styles["boxPenjelasan"]} ${styles["penjelasanRendah"]}`}></div>
-                        <p className={`${styles["floatLeft"]} ${styles["descPenjelasan"]} ${styles["descPenjelasan-rendah"]}`}>Low Risk Area ({this.state.persenRendah.toFixed(2)}%) </p>
-                    </div>
-                </div>
+                <Row className={styles["mapsPenjelasan"]}>
+                    <Col className={styles["columnPenjelasan"]}>
+                        <div className={styles["boxPenjelasan-High"]}></div>
+                        <p className={styles["descPenjelasan-High"]}>High Risk Area</p>
+                    </Col>
+                    <Col className={styles["columnPenjelasan"]}>
+                        <div className={styles["boxPenjelasan-Medium"]}></div>
+                        <p className={styles["descPenjelasan-Medium"]}>Medium Risk Area</p>
+                    </Col>
+                    <Col className={styles["columnPenjelasan"]}>
+                        <div className={styles["boxPenjelasan-Low"]}></div>
+                        <p className={styles["descPenjelasan-Low"]}>Low Risk Area</p>
+                    </Col>
+                </Row>
             </div>
         );
     }
