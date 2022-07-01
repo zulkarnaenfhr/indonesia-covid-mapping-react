@@ -1,5 +1,5 @@
 #charloteMapsContainer {
-    width: 818px;
+    width: 100%;
     border: 1px solid #5d5c5c;
     color: white;
 }
@@ -7,6 +7,7 @@
 .mapsPenjelasan {
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 472px;
 }
 
 .columnPenjelasan {
@@ -73,4 +74,3 @@
 .descPenjelasan-Low:hover {
     color: #39f245;
 }
-

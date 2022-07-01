@@ -10,7 +10,7 @@ const CardVaksin = (props) => {
                 {props.statusLoad ? (
                     <p className={styles["CardVaksin-Value"]}>{props.VaccinationTotal1.toLocaleString()}</p>
                 ) : (
-                    <p
+                    <div
                         style={{
                             textAlign: "center",
                             color: "rgb(103, 209, 209)",
@@ -18,7 +18,7 @@ const CardVaksin = (props) => {
                         }}
                     >
                         <Spinner animation="grow" size="sm" />
-                    </p>
+                    </div>
                 )}
             </div>
             <div className={styles["CardVaksin-Bottom"]}>
@@ -26,7 +26,7 @@ const CardVaksin = (props) => {
                 {props.statusLoad ? (
                     <p className={styles["CardVaksin-Value"]}>{props.VaccinationTotal2.toLocaleString()}</p>
                 ) : (
-                    <p
+                    <div
                         style={{
                             textAlign: "center",
                             color: "rgb(103, 209, 209)",
@@ -34,7 +34,7 @@ const CardVaksin = (props) => {
                         }}
                     >
                         <Spinner animation="grow" size="sm" />
-                    </p>
+                    </div>
                 )}
             </div>
         </div>

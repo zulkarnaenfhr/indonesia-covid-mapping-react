@@ -30,3 +30,9 @@ html {
 ::-webkit-scrollbar-thumb {
     background: #ff0000;
 }
+
+.leaflet-container {
+    position: absolute;
+    width: 100%;
+    height: 470px;
+}

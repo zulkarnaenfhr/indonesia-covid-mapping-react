@@ -80,7 +80,7 @@ export default class Section2 extends Component {
                         </button>
                     </div>
                 </Col>
-                <Col className={styles["Section2-Column-Container"]} lg={6}>
+                <Col className={styles["Section2-Column-Container"]} lg={7}>
                     {this.props.statusLoad ? (
                         <Charlotemaps dataWarna={this.props.warnaProvinsi} />
                     ) : (
@@ -98,7 +98,7 @@ export default class Section2 extends Component {
                         </div>
                     )}
                 </Col>
-                <Col className={styles["Section2-Column-Container"]} lg={3}>
+                <Col className={styles["Section2-Column-Container"]} lg={2}>
                     <Wilayahkasusterbanyak dataProvinsi={this.props.provinceData} />
                     <Cardberita dataBerita={this.props.beritaCovid} />
                 </Col>

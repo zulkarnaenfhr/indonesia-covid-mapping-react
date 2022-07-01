@@ -68,26 +68,8 @@ export default class CovidMappingIndonesia extends Component {
         this.getCityScoreData = this.getCityScoreData.bind(this);
         this.getSeluruhProvince = this.getSeluruhProvince.bind(this);
         this.getWarnaMaps = this.getWarnaMaps.bind(this);
-        this.handleMouseIn = this.handleMouseIn.bind(this);
         this.getBeritaCovid = this.getBeritaCovid.bind(this);
     }
-
-    handleMouseOut = (provinsi) => {
-        this.setState({
-            provinceName: provinsi,
-        });
-    };
-
-    handleMouseIn = (provinsi) => {
-        this.state.provinceData.map((data) => {
-            if (data.provinsi === provinsi) {
-                this.setState({
-                    provinceName: provinsi,
-                    provinceJumlahKasus: data.jumlah_kasus,
-                });
-            }
-        });
-    };
 
     handleActivePositif = () => {
         this.setState({
@@ -204,17 +186,17 @@ export default class CovidMappingIndonesia extends Component {
             if (resRendah > resSedang && resRendah > resTinggi) {
                 this.state.warnaProvinsi.push({
                     provinsi: prov,
-                    warna: "#DED716",
+                    warna: "#39f245",
                 });
             } else if (resSedang > resRendah && resSedang > resTinggi) {
                 this.state.warnaProvinsi.push({
                     provinsi: prov,
-                    warna: "#FFA500",
+                    warna: "#fabb48",
                 });
             } else {
                 this.state.warnaProvinsi.push({
                     provinsi: prov,
-                    warna: "#FF0000",
+                    warna: "#ff0000",
                 });
                 this.state.provinceDanger.push({
                     province: prov,

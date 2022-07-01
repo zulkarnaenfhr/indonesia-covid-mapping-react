@@ -36,3 +36,73 @@
     align-items: center;
     color: white;
 }
+
+.mapsPenjelasan {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.columnPenjelasan {
+    display: flex;
+    align-items: center;
+}
+
+.boxPenjelasan-High {
+    height: 20px;
+    width: 20px;
+    border-radius: 7px;
+    background-color: #f5bfba;
+    border: 3px solid #ff0000;
+}
+
+.descPenjelasan-High {
+    padding-top: 15px;
+    margin-left: 10px;
+    font-family: "Roboto Flex", sans-serif;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.descPenjelasan-High:hover {
+    color: #ff0000;
+}
+
+.boxPenjelasan-Medium {
+    height: 20px;
+    width: 20px;
+    border-radius: 7px;
+    background-color: #f5e0ba;
+    border: 3px solid #fabb48;
+}
+
+.descPenjelasan-Medium {
+    padding-top: 15px;
+    margin-left: 10px;
+    font-family: "Roboto Flex", sans-serif;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.descPenjelasan-Medium:hover {
+    color: #fabb48;
+}
+
+.boxPenjelasan-Low {
+    height: 20px;
+    width: 20px;
+    border-radius: 7px;
+    background-color: #beeec7;
+    border: 3px solid #39f245;
+}
+
+.descPenjelasan-Low {
+    padding-top: 15px;
+    margin-left: 10px;
+    font-family: "Roboto Flex", sans-serif;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.descPenjelasan-Low:hover {
+    color: #39f245;
+}
