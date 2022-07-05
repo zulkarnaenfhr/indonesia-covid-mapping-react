@@ -149,7 +149,7 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getBeritaCovid = async () => {
-        fetch("https://api-covid-indonesia.herokuapp.com/feedBerita")
+        fetch("https://indonesian-covid-api.herokuapp.com/v1/berita-covid")
             .then((response) => response.json())
             .then((dataBerita) =>
                 this.setState({
@@ -206,7 +206,7 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getCityScoreData = async () => {
-        fetch("https://api-covid-indonesia.herokuapp.com/RiskScoreProvinsi")
+        fetch("https://indonesian-covid-api.herokuapp.com/v1/risk-score-provinsi")
             .then((response) => response.json())
             .then((data) =>
                 this.setState({
@@ -251,7 +251,7 @@ export default class CovidMappingIndonesia extends Component {
     getIndonesiaData = async () => {
         // mengambil data indonesia
         let indonesiaData = "";
-        await fetch("https://api-covid-indonesia.herokuapp.com/UpdateHarianIndonesia")
+        await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
             .then((response) => response.json())
             .then((data) => {
                 indonesiaData = data;
@@ -272,7 +272,7 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getIndonesiaDataHarian = async () => {
-        await fetch("https://api-covid-indonesia.herokuapp.com/UpdateHarianIndonesia")
+        await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
             .then((response) => response.json())
             .then((data) =>
                 this.setState({
@@ -306,7 +306,7 @@ export default class CovidMappingIndonesia extends Component {
 
     getProvinceData = async () => {
         // mengambil data provinsi
-        await fetch("https://api-covid-indonesia.herokuapp.com/KasusSeluruhProvinsi")
+        await fetch("https://indonesian-covid-api.herokuapp.com/v1/kasus-seluruh-provinsi")
             .then((response) => response.json())
             .then((data) =>
                 this.setState({
@@ -336,7 +336,7 @@ export default class CovidMappingIndonesia extends Component {
 
     getDataVaksin = async () => {
         // mengambil data vaksin
-        await fetch("https://api-covid-indonesia.herokuapp.com/PemeriksaandanVaksinisasi")
+        await fetch("https://indonesian-covid-api.herokuapp.com/v1/pemeriksaan-dan-vaksinasi")
             .then((response) => response.json())
             .then((data) =>
                 this.setState({
