@@ -20,12 +20,11 @@ To do some charting features, I use the Js Library from <a href="https://www.amc
 
 ### Indonesia Data
 
-![image](https://user-images.githubusercontent.com/71364128/158176309-02b65702-d016-4d44-83c9-fca572c3be9f.png)
+![image](https://user-images.githubusercontent.com/71364128/177536862-00843811-dd51-4440-a70c-7382b684da18.png)
 
 ### Province Data
-
-![image](https://user-images.githubusercontent.com/71364128/158176371-4b6484ce-739a-413e-87d4-35d804b872cc.png)
+![image](https://user-images.githubusercontent.com/71364128/177536912-4ef51201-2e2b-49a8-9e28-463e20809507.png)
 
 ### Fullscreen View
 
-![image](https://user-images.githubusercontent.com/71364128/158176477-4a974c64-7c19-4b60-ac0f-55d4dda7c43b.png)
+![image](https://user-images.githubusercontent.com/71364128/177536949-6b8ab374-912d-4914-95ee-e37f13db64ed.png)
