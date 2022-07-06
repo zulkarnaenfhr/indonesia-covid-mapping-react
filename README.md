@@ -1,12 +1,12 @@
 # Indonesia Covid-19 Risk Score Mapping and Data Dashboard
 
-Indonesia Covid-19 Mapping and Data Dashboard is a website that can monitor the latest conditions for the COVID-19 pandemic in Indonesia developed by SpaceCapt-Tech 2020. This project is very useful for the public if they want to do the latest monitoring of the covid-19 pandemic in Indonesia. this project was created using react js technology and some of its supporting libraries
+Indonesia Covid-19 Mapping and Data Dashboard is a website that can monitor the latest conditions for the COVID-19 pandemic in Indonesia developed by SpaceCapt-Tech 2020. This project is very useful for the public if they want to do the latest monitoring of the covid-19 pandemic in Indonesia. this project was created using react js technology and some of its supporting libraries. To see the project being in a deploy in vercel app, these are the result <a href="https://indonesia-covid-mapping-react.vercel.app/" target="_blank">Indonesian Covid-19 Mapping and Data Dashboard</a>
 
 ## Method
 
 ### Data
 
-for my own data I use several sources with the main source from <a href="https://covid19.go.id/dokumentasi-api" target="_blank">Covid19.go.id</a>. because the application programming interface provided by the government is blocked by the cors policy. So I used the api provided by <a href="https://github.com/Reynadi531/api-covid19-indonesia-v2" target="_blank">Reynaldi531</a>. then for the City Score and Indonesia Covid-19 News, I outsmarted it by retrieving API using node Js with Express, Cors, and node-fetch libraries. After being called, it will return to JSON with cors option-origin only the website link that I used. For the Documentation <a href="https://github.com/zulkarnaenfhr/api-covid-indonesia" target="_blank">Github</a>, for online response <a href="https://api-covid-indonesia.herokuapp.com/" target="_blank">Heroku Apps</a>
+For my own data I use several sources with the main source from <a href="https://covid19.go.id/dokumentasi-api" target="_blank">Covid19.go.id</a>. Because the application programming interface provided by the government is blocked by the cors policy, So I outsmarted it by retrieving API using node Js with Express, Cors, and node-fetch libraries. After being called, it will return to JSON with cors option-origin only the website link that I used. For the Documentation <a href="https://github.com/zulkarnaenfhr/api-covid-indonesia" target="_blank">Github</a>, for online response <a href="https://api-covid-indonesia.herokuapp.com/" target="_blank">Heroku Apps</a>
 
 ### Map
 
