@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Indonesia Covid-19 Risk Score Mapping and Data Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Indonesia Covid-19 Mapping and Data Dashboard is a website that can monitor the latest conditions for the COVID-19 pandemic in Indonesia developed by SpaceCapt-Tech 2020. This project is very useful for the public if they want to do the latest monitoring of the covid-19 pandemic in Indonesia. this project was created using react js technology and some of its supporting libraries
 
-## Available Scripts
+## Method
 
-In the project directory, you can run:
+### Data
 
-### `npm start`
+for my own data I use several sources with the main source from <a href="https://covid19.go.id/dokumentasi-api" target="_blank">Covid19.go.id</a>. because the application programming interface provided by the government is blocked by the cors policy. So I used the api provided by <a href="https://github.com/Reynadi531/api-covid19-indonesia-v2" target="_blank">Reynaldi531</a>. then for the City Score and Indonesia Covid-19 News, I outsmarted it by retrieving API using node Js with Express, Cors, and node-fetch libraries. After being called, it will return to JSON with cors option-origin only the website link that I used. For the Documentation <a href="https://github.com/zulkarnaenfhr/api-covid-indonesia" target="_blank">Github</a>, for online response <a href="https://api-covid-indonesia.herokuapp.com/" target="_blank">Heroku Apps</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Map
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For the map feature, I'm using the library from <a href="https://react-leaflet.js.org/" target="_blank">React-Leaflet</a> with tile layers from <a href="https://www.mapbox.com/" target="_blank">MapBox</a>
 
-### `npm test`
+### Chart
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To do some charting features, I use the Js Library from <a href="https://www.amcharts.com/" target="_blank">AmChart.Js</a>
 
-### `npm run build`
+## Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Indonesia Data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/71364128/158176309-02b65702-d016-4d44-83c9-fca572c3be9f.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Province Data
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/71364128/158176371-4b6484ce-739a-413e-87d4-35d804b872cc.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Fullscreen View
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://user-images.githubusercontent.com/71364128/158176477-4a974c64-7c19-4b60-ac0f-55d4dda7c43b.png)
