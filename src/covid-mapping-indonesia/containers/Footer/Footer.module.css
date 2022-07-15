@@ -11,6 +11,11 @@
     margin-top: 15px;
 }
 
+.footer-content-container {
+    width: 100%;
+    max-width: 900px;
+}
+
 .footer-desc {
     text-align: center;
     color: white;
