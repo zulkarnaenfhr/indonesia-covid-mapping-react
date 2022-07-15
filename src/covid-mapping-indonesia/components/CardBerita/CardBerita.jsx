@@ -22,7 +22,7 @@ class Cardberita extends Component {
                                     <p className={styles["beritaJudul"]}>{data.title}</p>
                                     <p className={styles["beritaDesc"]}>{data.description}</p>
                                     <p className={styles["beritaLinkTanggal"]}>
-                                        <a className={styles["beritaLink"]} href={data.url}>
+                                        <a target={"blank"} className={styles["beritaLink"]} href={data.url}>
                                             Klik Disini
                                         </a>
                                         ,<span className={styles["beritaTanggal"]}>{tanggalUpload}</span>

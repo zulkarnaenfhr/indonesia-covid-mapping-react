@@ -25,7 +25,7 @@ class Footer extends Component {
                     >
                         <p className={styles["footer-desc"]}>
                             Using API From
-                            <a className={styles["footer-link"]} href="https://covid19.go.id/dokumentasi-api">
+                            <a className={styles["footer-link"]} target={"blank"} href="https://covid19.go.id/dokumentasi-api">
                                 Covid-19.go.id
                             </a>
                         </p>
@@ -36,7 +36,7 @@ class Footer extends Component {
                             }}
                         >
                             Cek Ketersediaan Bed Rumah Sakit
-                            <a className={styles["footer-link"]} href="https://cek-bed-rs-indonesia.herokuapp.com/">
+                            <a className={styles["footer-link"]} target={"blank"} href="https://cek-bed-rs-indonesia.herokuapp.com/">
                                 cek-bed-rs-indonesia.com
                             </a>
                         </p>
