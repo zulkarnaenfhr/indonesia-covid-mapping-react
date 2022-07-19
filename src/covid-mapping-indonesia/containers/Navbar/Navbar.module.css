@@ -1,5 +1,6 @@
 #Navbar {
-    height: 60px;
+    height: fit-content;
+    min-height: 60px;
     width: 100%;
     background-color: #222222;
     color: white;
@@ -28,7 +29,7 @@
 }
 
 .Navbar-Form-Box {
-    width: 200px;
+    width: 100%;
     border: 1px solid #5d5c5c;
     height: 100%;
     padding-top: 5px;
@@ -53,4 +54,38 @@
     border: none;
     position: relative;
     bottom: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Navbar-Branding {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .Navbar-Branding {
+        font-size: calc(0.8 * 23px);
+    }
+}
+
+@media screen and (max-width: 772px) {
+    .Navbar-Column-Right {
+        justify-content: left;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar-Branding {
+        font-size: calc(0.8 * 23px);
+        text-align: center;
+        justify-content: center;
+    }
+
+    .Navbar-Column-Right {
+        width: 100vw;
+        justify-content: left;
+    }
+    .Navbar-Column-Right-Container {
+        width: 100vw;
+    }
 }
