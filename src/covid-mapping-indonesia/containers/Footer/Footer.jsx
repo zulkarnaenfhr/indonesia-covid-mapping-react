@@ -17,19 +17,19 @@ class Footer extends Component {
                             SpaceCapt-Tech @covid-2022
                         </span>{" "}
                     </p>
-                    <div
+                    <Row
                         style={{
                             display: "flex",
                             justifyContent: "center",
                         }}
                     >
-                        <p className={styles["footer-desc"]}>
+                        <Col md={4} className={styles["footer-desc"]}>
                             Using API From
                             <a className={styles["footer-link"]} target={"blank"} href="https://covid19.go.id/dokumentasi-api">
                                 Covid-19.go.id
                             </a>
-                        </p>
-                        <p
+                        </Col>
+                        <Col md={7}
                             className={styles["footer-desc"]}
                             style={{
                                 marginLeft: "20px",
@@ -39,8 +39,8 @@ class Footer extends Component {
                             <a className={styles["footer-link"]} target={"blank"} href="https://cek-bed-rs-indonesia.herokuapp.com/">
                                 cek-bed-rs-indonesia.com
                             </a>
-                        </p>
-                    </div>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         );

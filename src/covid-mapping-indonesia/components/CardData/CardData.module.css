@@ -1,6 +1,7 @@
 #CardData {
     width: 100%;
     max-width: 280px;
+    min-width: 180px;
     height: 164px;
     border: 1px solid #5d5c5c;
     font-family: "Roboto Flex", sans-serif;
