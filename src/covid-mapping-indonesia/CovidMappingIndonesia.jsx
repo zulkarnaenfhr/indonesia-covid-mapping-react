@@ -149,7 +149,7 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getBeritaCovid = async () => {
-        fetch("https://indonesian-covid-api.herokuapp.com/v1/berita-covid")
+        fetch("https://api-covid-indonesia.herokuapp.com/feedBerita")
             .then((response) => response.json())
             .then((dataBerita) =>
                 this.setState({
