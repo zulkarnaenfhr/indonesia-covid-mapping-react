@@ -149,13 +149,18 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getBeritaCovid = async () => {
-        fetch("https://api-covid-indonesia.herokuapp.com/feedBerita")
-            .then((response) => response.json())
-            .then((dataBerita) =>
-                this.setState({
-                    beritaCovid: dataBerita.articles,
-                })
-            );
+        // fetch("https://api-covid-indonesia.herokuapp.com/feedBerita")
+        //     .then((response) => response.json())
+        //     .then((dataBerita) =>
+        //         this.setState({
+        //             beritaCovid: dataBerita.articles,
+        //         })
+        //     );
+
+        let data = require("../data/news.json");
+        this.setState({
+            beritaCovid: data.articles,
+        });
     };
 
     getWarnaMaps = async () => {
@@ -206,13 +211,18 @@ export default class CovidMappingIndonesia extends Component {
     };
 
     getCityScoreData = async () => {
-        fetch("https://indonesian-covid-api.herokuapp.com/v1/risk-score-provinsi")
-            .then((response) => response.json())
-            .then((data) =>
-                this.setState({
-                    cityScore: data.data,
-                })
-            );
+        // fetch("https://indonesian-covid-api.herokuapp.com/v1/risk-score-provinsi")
+        //     .then((response) => response.json())
+        //     .then((data) =>
+        //         this.setState({
+        //             cityScore: data.data,
+        //         })
+        //     );
+
+        let data = require("../data/city score.json");
+        this.setState({
+            cityScore: data.data,
+        });
     };
 
     handleProvinceChange = async (event) => {
@@ -251,99 +261,161 @@ export default class CovidMappingIndonesia extends Component {
     getIndonesiaData = async () => {
         // mengambil data indonesia
         let indonesiaData = "";
-        await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
-            .then((response) => response.json())
-            .then((data) => {
-                indonesiaData = data;
-                this.setState({
-                    indonesiaData: data,
-                    tanggalUpdate: data.update.penambahan.tanggal,
-                    totalKasus: data.update.total.jumlah_positif,
-                    totalDirawat: data.update.total.jumlah_dirawat,
-                    totalSembuh: data.update.total.jumlah_sembuh,
-                    totalMeningggal: data.update.total.jumlah_meninggal,
-                    updateTotalKasus: data.update.penambahan.jumlah_positif,
-                    updateTotalDirawat: data.update.penambahan.jumlah_dirawat,
-                    updateTotalSembuh: data.update.penambahan.jumlah_sembuh,
-                    updateTotalMeningggal: data.update.penambahan.jumlah_meninggal,
-                });
-            });
+        // await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         indonesiaData = data;
+        //         this.setState({
+        //             indonesiaData: data,
+        //             tanggalUpdate: data.update.penambahan.tanggal,
+        //             totalKasus: data.update.total.jumlah_positif,
+        //             totalDirawat: data.update.total.jumlah_dirawat,
+        //             totalSembuh: data.update.total.jumlah_sembuh,
+        //             totalMeningggal: data.update.total.jumlah_meninggal,
+        //             updateTotalKasus: data.update.penambahan.jumlah_positif,
+        //             updateTotalDirawat: data.update.penambahan.jumlah_dirawat,
+        //             updateTotalSembuh: data.update.penambahan.jumlah_sembuh,
+        //             updateTotalMeningggal: data.update.penambahan.jumlah_meninggal,
+        //         });
+        //     });
+        let data = require("../data/update harian.json");
+        indonesiaData = data;
+        this.setState({
+            indonesiaData: data,
+            tanggalUpdate: data.update.penambahan.tanggal,
+            totalKasus: data.update.total.jumlah_positif,
+            totalDirawat: data.update.total.jumlah_dirawat,
+            totalSembuh: data.update.total.jumlah_sembuh,
+            totalMeningggal: data.update.total.jumlah_meninggal,
+            updateTotalKasus: data.update.penambahan.jumlah_positif,
+            updateTotalDirawat: data.update.penambahan.jumlah_dirawat,
+            updateTotalSembuh: data.update.penambahan.jumlah_sembuh,
+            updateTotalMeningggal: data.update.penambahan.jumlah_meninggal,
+        });
         // akhir mengambil data indonesia
     };
 
     getIndonesiaDataHarian = async () => {
-        await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
-            .then((response) => response.json())
-            .then((data) =>
-                this.setState({
-                    indonesiaDataHarian: data.update.harian,
-                })
-            )
-            .then(() => {
-                this.state.indonesiaDataHarian.map((data) => {
-                    this.state.indonesiaDataHarianJumlahJumlahPositif.push({
-                        positif_kumulatif: data.jumlah_positif_kum.value,
-                        tanggal: data.key_as_string,
-                    });
+        // await fetch("https://indonesian-covid-api.herokuapp.com/v1/update-harian-indonesia")
+        //     .then((response) => response.json())
+        //     .then((data) =>
+        //         this.setState({
+        //             indonesiaDataHarian: data.update.harian,
+        //         })
+        //     )
+        //     .then(() => {
+        //         this.state.indonesiaDataHarian.map((data) => {
+        //             this.state.indonesiaDataHarianJumlahJumlahPositif.push({
+        //                 positif_kumulatif: data.jumlah_positif_kum.value,
+        //                 tanggal: data.key_as_string,
+        //             });
 
-                    this.state.indonesiaDataHarianJumlahUpdatePositif.push({
-                        tanggal: data.key_as_string,
-                        value: data.jumlah_positif.value,
-                    });
+        //             this.state.indonesiaDataHarianJumlahUpdatePositif.push({
+        //                 tanggal: data.key_as_string,
+        //                 value: data.jumlah_positif.value,
+        //             });
 
-                    this.state.indonesiaDataHarianJumlahUpdateSembuh.push({
-                        tanggal: data.key_as_string,
-                        value: data.jumlah_sembuh.value,
-                    });
+        //             this.state.indonesiaDataHarianJumlahUpdateSembuh.push({
+        //                 tanggal: data.key_as_string,
+        //                 value: data.jumlah_sembuh.value,
+        //             });
 
-                    this.state.indonesiaDataHarianJumlahUpdateMeninggal.push({
-                        tanggal: data.key_as_string,
-                        value: data.jumlah_meninggal.value,
-                    });
-                });
+        //             this.state.indonesiaDataHarianJumlahUpdateMeninggal.push({
+        //                 tanggal: data.key_as_string,
+        //                 value: data.jumlah_meninggal.value,
+        //             });
+        //         });
+        //     });
+
+        let data = require("../data/update harian.json");
+        await this.setState({
+            indonesiaDataHarian: data.update.harian,
+        });
+        this.state.indonesiaDataHarian.map((data) => {
+            this.state.indonesiaDataHarianJumlahJumlahPositif.push({
+                positif_kumulatif: data.jumlah_positif_kum.value,
+                tanggal: data.key_as_string,
             });
+
+            this.state.indonesiaDataHarianJumlahUpdatePositif.push({
+                tanggal: data.key_as_string,
+                value: data.jumlah_positif.value,
+            });
+
+            this.state.indonesiaDataHarianJumlahUpdateSembuh.push({
+                tanggal: data.key_as_string,
+                value: data.jumlah_sembuh.value,
+            });
+
+            this.state.indonesiaDataHarianJumlahUpdateMeninggal.push({
+                tanggal: data.key_as_string,
+                value: data.jumlah_meninggal.value,
+            });
+        });
     };
 
     getProvinceData = async () => {
         // mengambil data provinsi
-        await fetch("https://indonesian-covid-api.herokuapp.com/v1/kasus-seluruh-provinsi")
-            .then((response) => response.json())
-            .then((data) =>
-                this.setState({
-                    provinceData: data.list_data,
-                })
-            )
-            .then(() => {
-                this.state.provinceData.map((data) => {
-                    this.state.province.push(data.key);
-                });
-            })
-            .then(() => {
-                function compare(a, b) {
-                    if (a.jumlah_kasus > b.jumlah_kasus) {
-                        return -1;
-                    }
-                    if (a.jumlah_kasus < b.jumlah_kasus) {
-                        return 1;
-                    }
-                    return 0;
-                }
-                this.state.provinceData.sort(compare);
-            });
+        // await fetch("https://indonesian-covid-api.herokuapp.com/v1/kasus-seluruh-provinsi")
+        //     .then((response) => response.json())
+        //     .then((data) =>
+        //         this.setState({
+        //             provinceData: data.list_data,
+        //         })
+        //     )
+        //     .then(() => {
+        //         this.state.provinceData.map((data) => {
+        //             this.state.province.push(data.key);
+        //         });
+        //     })
+        //     .then(() => {
+        //         function compare(a, b) {
+        //             if (a.jumlah_kasus > b.jumlah_kasus) {
+        //                 return -1;
+        //             }
+        //             if (a.jumlah_kasus < b.jumlah_kasus) {
+        //                 return 1;
+        //             }
+        //             return 0;
+        //         }
+        //         this.state.provinceData.sort(compare);
+        //     });
 
+        let data = require("../data/Seluruh Provinsi.json");
+        await this.setState({
+            provinceData: data.list_data,
+        });
+        await this.state.provinceData.map((data) => {
+            this.state.province.push(data.key);
+        });
+        function compare(a, b) {
+            if (a.jumlah_kasus > b.jumlah_kasus) {
+                return -1;
+            }
+            if (a.jumlah_kasus < b.jumlah_kasus) {
+                return 1;
+            }
+            return 0;
+        }
+        this.state.provinceData.sort(compare);
         // mengambil seluruh nama provinsi
     };
 
     getDataVaksin = async () => {
         // mengambil data vaksin
-        await fetch("https://indonesian-covid-api.herokuapp.com/v1/pemeriksaan-dan-vaksinasi")
-            .then((response) => response.json())
-            .then((data) =>
-                this.setState({
-                    jumlahVaksin1: data.vaksinasi.total.jumlah_vaksinasi_1,
-                    jumlahVaksin2: data.vaksinasi.total.jumlah_vaksinasi_2,
-                })
-            );
+        // await fetch("https://indonesian-covid-api.herokuapp.com/v1/pemeriksaan-dan-vaksinasi")
+        //     .then((response) => response.json())
+        //     .then((data) =>
+        //         this.setState({
+        //             jumlahVaksin1: data.vaksinasi.total.jumlah_vaksinasi_1,
+        //             jumlahVaksin2: data.vaksinasi.total.jumlah_vaksinasi_2,
+        //         })
+        //     );
+        let data = require("../data/pemeriksaan-vaksinasi.json");
+        this.setState({
+            jumlahVaksin1: data.vaksinasi.total.jumlah_vaksinasi_1,
+            jumlahVaksin2: data.vaksinasi.total.jumlah_vaksinasi_2,
+        });
     };
 
     async componentDidMount() {
